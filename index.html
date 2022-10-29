@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Introducción a Javascript</title>
+</head>
+
+<body>
+    <div class="card">
+        <img src="assets/img/laptop.png" alt="card generic product image">
+        <h4>Laptop Gamer AMD</h4>
+        <input id="quantity" type="text" placeholder="Cantidad">
+        <input id="color" type="text" placeholder="Color">
+        <p>Precio: 40.0000</p>
+        <button onclick="
+        quantity = document.querySelector('#quantity')
+        definedTotal = document.querySelector('#total-defined')
+        definedTotal.innerHTML = quantity.value * 400000
+        definedQuantity = document.querySelector('#quantity-defined')
+        definedQuantity.innerHTML = quantity.value
+        color = document.querySelector('#color')
+        colors = document.querySelector('#color-defined')
+        colors.style.backgroundColor = color.value">Calcular Total</button>
+    </div>
+    <div class="card-inner-data">
+        <p>Total $<span id="total-defined">0</span></p>
+        <p>Cantidad: <span id="quantity-defined">0</span></p>
+        <p>Color: <span id="color-defined"></span></p>
+    </div>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
